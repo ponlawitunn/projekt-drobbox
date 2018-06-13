@@ -1,0 +1,48 @@
+<div id="contianer-5">
+    <form id="filter">
+        <input type="text" placeholder="Search your file..." 
+        [(ngModel)]="term" name="term" />
+    </form>  
+</div>
+  <div id="contianer-1">
+      <div id="contianer-2">
+          <div id="icon-1"><i class="material-icons">
+              home
+              </i>
+            </div>
+          <div>My files</div>
+          <div>Sharing</div>
+          <div>Delete files</div>
+      </div>
+      <div id="contianer-3">
+        <h2>Dropbox</h2>
+          <div *ngFor= "let entri of entries | filter:term">
+        
+              <a *ngIf="entri['.tag'] === 'folder'" routerLink="{{entri.path_lower}}">
+                <i class="material-icons">
+                  folder
+                  </i>
+                  {{entri.name}} </a>
+              <a *ngIf="entri['.tag'] === 'file'">
+                  <i class="material-icons">
+                      insert_drive_file
+                      </i>
+                      {{entri.name}} </a>
+              </div>
+      </div>
+      <div id="contianer-4">
+          <div>
+            <form onSubmit="return uploadFile()">
+                <input type="file" id="file-upload" />
+                <button type="submit">Upload files</button>
+            </form>
+            <div><i class="material-icons">
+                    folder_open
+                    </i>
+                    New folder</div>
+                <div><i class="material-icons">
+                    folder_shared
+                    </i>New shared folder</div>
+          </div>
+      </div>
+  </div>

@@ -1,0 +1,40 @@
+
+#contianer-1 {
+    display: flex;
+    
+}
+#contianer-2 {
+    width: 300px;
+    text-align: center;
+    margin-top: 5%;
+
+    padding: 1em;
+}
+#contianer-3 {
+    width: 600px;
+    margin-top: 5%;
+    padding: 1em;
+    background-color: white;
+}
+#contianer-3 h2 {
+    text-align: center;
+    margin-left: -15%;
+    
+}
+#contianer-4 {
+    margin-top: 5%;
+    padding: 1em;
+    text-align: center;
+}
+#icon-1 {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+#btn-1 {
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+input {
+    margin-right: 5px;
+    padding: 1em;
+}
