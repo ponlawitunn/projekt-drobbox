@@ -10,9 +10,9 @@
               home
               </i>
             </div>
-          <div>My files</div>
-          <div>Sharing</div>
-          <div>Delete files</div>
+          <div><a routerLink="#">My files</a></div>
+          <div><a routerLink="#">Sharing</a></div>
+          <div><a routerLink="#">Delete files</a></div>
       </div>
       <div id="contianer-3">
         <h2>Dropbox</h2>
@@ -23,7 +23,7 @@
                   folder
                   </i>
                   {{entri.name}} </a>
-              <a *ngIf="entri['.tag'] === 'file'">
+              <a *ngIf="entri['.tag'] === 'file'" (click)="downloadFile(entri.path_lower)">
                   <i class="material-icons">
                       insert_drive_file
                       </i>
@@ -32,17 +32,20 @@
       </div>
       <div id="contianer-4">
           <div>
-            <form onSubmit="return uploadFile()">
+            <form (ngSubmit)="uploadFile()">
                 <input type="file" id="file-upload" />
                 <button type="submit">Upload files</button>
             </form>
             <div><i class="material-icons">
                     folder_open
                     </i>
-                    New folder</div>
+                    <a routerLink="#">New folder</a>
+                </div>
                 <div><i class="material-icons">
                     folder_shared
-                    </i>New shared folder</div>
+                    </i>
+                    <a routerLink="#">New shared folder</a>
+                </div>
           </div>
       </div>
   </div>
