@@ -1,41 +1,77 @@
 
 #contianer-1 {
-    display: flex;
-    
+  display: flex;
+  background-color: lightskyblue;
+  padding-bottom: 40px;
+  margin-left: 10%;
+  margin-right: 10%;
+
 }
 #contianer-2 {
-    width: 300px;
-    text-align: center;
-    margin-top: 5%;
-
-    padding: 1em;
+  width: 200px;
+  text-align: center;
+  margin-top: 5%;
+  padding: 1em;
 }
+
+#contianer-2 a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
 #contianer-3 {
-    width: 600px;
-    margin-top: 5%;
-    padding: 1em;
-    background-color: white;
+  width: 600px;
+  margin-top: 5%;
+  padding: 1em;
+  background-color: white;
 }
 #contianer-3 h2 {
-    text-align: center;
-    margin-left: -15%;
-    
+  text-align: center;
 }
+
+#contianer-3 a {
+  text-decoration: none;
+}
+
 #contianer-4 {
-    margin-top: 5%;
-    width: 500px;
-    padding: 1em;
-    text-align: center;
+  margin-top: 5%;
+  width: 500px;
+  padding: 1em;
+  text-align: center;
+}
+
+#contianer-4 form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contianer-4 input {
+  align-self: center;
+  width: 45px;
+}
+
+#contianer-4 button {
+  background-color: mediumspringgreen;
+  width: 100px;
+  height: 30px;
+  border-style: none;
+  align-self: center;
+  margin-bottom: 100px;
+}
+
+#contianer-4 a {
+  text-decoration: none;
+  color: whitesmoke;
 }
 #icon-1 {
-    margin-top: 10%;
-    margin-bottom: 10%;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 #btn-1 {
-    margin-top: 20%;
-    margin-bottom: 20%;
+  margin-top: 20%;
+  margin-bottom: 20%;
 }
 input {
-    margin-right: 5px;
-    padding: 1em;
+  margin-right: 5px;
+  padding: 1em;
 }
