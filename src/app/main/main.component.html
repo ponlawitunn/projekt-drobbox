@@ -1,51 +1,54 @@
-<div id="contianer-5">
-    <form id="filter">
-        <input type="text" placeholder="Search your file..." 
-        [(ngModel)]="term" name="term" />
-    </form>  
+<div>
+    <button (click)="logout()">Log out</button>
 </div>
-  <div id="contianer-1">
-      <div id="contianer-2">
-          <div id="icon-1"><i class="material-icons">
-              home
-              </i>
-            </div>
-          <div><a routerLink="#">My files</a></div>
-          <div><a routerLink="#">Sharing</a></div>
-          <div><a routerLink="#">Delete files</a></div>
+<div id="contianer-1">
+    <div id="contianer-2">
+      <div id="icon-1"><i class="material-icons">
+        home
+      </i>
       </div>
-      <div id="contianer-3">
-        <h2>Dropbox</h2>
-          <div *ngFor= "let entri of entries | filter:term">
-        
-              <a *ngIf="entri['.tag'] === 'folder'" routerLink="{{entri.path_lower}}">
-                <i class="material-icons">
-                  folder
-                  </i>
-                  {{entri.name}} </a>
-              <a *ngIf="entri['.tag'] === 'file'" (click)="downloadFile(entri.path_lower)">
-                  <i class="material-icons">
-                      insert_drive_file
-                      </i>
-                      {{entri.name}} </a>
-              </div>
+      <div><a routerLink="#">My files</a></div>
+      <div><a routerLink="#">Sharing</a></div>
+      <div><a routerLink="#">Delete files</a></div>
+    </div>
+    <div id="contianer-3">
+      <div id="contianer-5">
+        <form id="filter">
+          <input type="text" placeholder="Search your file..."
+                 [(ngModel)]="term" name="term" />
+        </form>
       </div>
-      <div id="contianer-4">
-          <div>
-            <form (ngSubmit)="uploadFile()">
-                <input type="file" id="file-upload" />
-                <button type="submit">Upload files</button>
-            </form>
-            <div><i class="material-icons">
-                    folder_open
-                    </i>
-                    <a routerLink="#">New folder</a>
-                </div>
-                <div><i class="material-icons">
-                    folder_shared
-                    </i>
-                    <a routerLink="#">New shared folder</a>
-                </div>
-          </div>
+      <h2>Dropbox</h2>
+      <div *ngFor= "let entri of entries | filter:term">
+  
+        <a *ngIf="entri['.tag'] === 'folder'" routerLink="{{entri.path_lower}}">
+          <i class="material-icons">
+            folder
+          </i>
+          {{entri.name}} </a>
+        <a *ngIf="entri['.tag'] === 'file'" (click)="downloadFile(entri.path_lower)">
+          <i class="material-icons">
+            insert_drive_file
+          </i>
+          {{entri.name}} </a>
       </div>
+    </div>
+    <div id="contianer-4">
+      <div>
+        <form (ngSubmit)="uploadFile()">
+          <input type="file" id="file-upload" />
+          <button type="submit">Upload files</button>
+        </form>
+        <div><i class="material-icons">
+          folder_open
+        </i>
+          <a routerLink="#">New folder</a>
+        </div>
+        <div><i class="material-icons">
+          folder_shared
+        </i>
+          <a routerLink="#">New shared folder</a>
+        </div>
+      </div>
+    </div>
   </div>

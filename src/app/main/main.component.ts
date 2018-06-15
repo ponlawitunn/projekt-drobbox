@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute} from '@angular/router';
 import { FilterPipe } from '../filter.pipe';
+import { LoginService } from '../login.service';
 
 const key = "H9c8bkAnoVAAAAAAAAAALWUY05P41wCf5HakHe0B3AXsxS21ysKJ71gZyPyBYx7g"
 
@@ -73,4 +74,11 @@ downloadFile(entri) {
     });
   return false;
 }
+
+logout(){
+  localStorage.removeItem('token'); // Removes your token but changes remain
+  this.router.navigate(['login']);
+
+}
+
 }
