@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute} from '@angular/router';
 import { FilterPipe } from '../filter.pipe';
 import { LoginService } from '../login.service';
+import { Location } from '@angular/common';
+
 
 const key = "H9c8bkAnoVAAAAAAAAAALWUY05P41wCf5HakHe0B3AXsxS21ysKJ71gZyPyBYx7g"
 
@@ -12,12 +14,15 @@ var dbx = new Dropbox({ accessToken: key });
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css'],
-  
+
 })
 export class MainComponent implements OnInit {
   entries = [];
   term = "";
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(
+    private route: ActivatedRoute, private router: Router,
+    private location: Location
+  ) { }
 
   ngOnInit() {
     this.route.url.subscribe(() => {
@@ -80,5 +85,9 @@ logout(){
   this.router.navigate(['login']);
 
 }
+
+  goBack(): void {
+    this.location.back();
+  }
 
 }

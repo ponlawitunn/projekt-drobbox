@@ -4,7 +4,7 @@
     padding-bottom: 40px;
     margin-left: 10%;
     margin-right: 10%;
-  
+
   }
   #contianer-2 {
     width: 200px;
@@ -12,12 +12,12 @@
     margin-top: 5%;
     padding: 1em;
   }
-  
+
   #contianer-2 a {
     text-decoration: none;
     color: whitesmoke;
   }
-  
+
   #contianer-3 {
     width: 600px;
     margin-top: 5%;
@@ -27,28 +27,28 @@
   #contianer-3 h2 {
     text-align: center;
   }
-  
+
   #contianer-3 a {
     text-decoration: none;
   }
-  
+
   #contianer-4 {
     margin-top: 5%;
     width: 500px;
     padding: 1em;
     text-align: center;
   }
-  
+
   #contianer-4 form {
     display: flex;
     flex-direction: column;
   }
-  
+
   #contianer-4 input {
     align-self: center;
     width: 45px;
   }
-  
+
   #contianer-4 button {
     background-color: mediumspringgreen;
     width: 100px;
@@ -57,7 +57,7 @@
     align-self: center;
     margin-bottom: 100px;
   }
-  
+
   #contianer-4 a {
     text-decoration: none;
     color: whitesmoke;
@@ -74,3 +74,24 @@
     margin-right: 5px;
     padding: 1em;
   }
+
+  button{
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    background-color: #eee;
+    border-radius: 4px;
+  }
+
+button:visited {
+  color: #607d8b;
+}
+button:hover {
+  color: white;
+  background-color: red;
+}
+button.active {
+  color: #039be5;
+}
