@@ -35,6 +35,15 @@
             insert_drive_file
           </i>
           {{entri.name}} </a>
+
+
+          <i *ngIf="!entryStarred(entri.id)" class="material-icons" (click)="toggleStar(entri.id, false)">
+            star_border
+          </i>
+          <i *ngIf="entryStarred(entri.id)" class="material-icons" (click)="toggleStar(entri.id, true)">
+            star
+          </i>
+
       </div>
     </div>
     <div id="contianer-4">

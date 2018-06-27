@@ -59,6 +59,28 @@ uploadFile() {
     });
   return false;
 }
+
+entryStarred(entryId){
+    const starredEntries = JSON.parse(localStorage.getItem('starredEntries'));
+    if (starredEntries == null){
+      return false;
+    }
+    return starredEntries.indexOf(entryId) > -1;
+}
+
+toggleStar(entryId, isStarred){
+  let starredEntries = JSON.parse(localStorage.getItem('starredEntries'));
+  if (isStarred) {
+    starredEntries.splice(starredEntries.indexOf(entryId), 1);
+  } else {
+    if (starredEntries == null) {
+      starredEntries = [];
+    }
+      starredEntries.push(entryId);
+  }
+  localStorage.setItem('starredEntries', JSON.stringify(starredEntries));
+}
+
 //downloadFile(entri.path_lower)
 downloadFile(entri) {
   dbx.filesDownload({path: entri})
@@ -82,6 +104,7 @@ downloadFile(entri) {
 
 logout(){
   localStorage.removeItem('token'); // Removes your token but changes remain
+  localStorage.removeItem('starredEntries');
   this.router.navigate(['login']);
 
 }
